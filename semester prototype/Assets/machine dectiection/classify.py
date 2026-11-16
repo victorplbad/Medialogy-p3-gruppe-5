@@ -7,6 +7,24 @@ import tf_keras
 from PIL import Image, ImageOps
 
 
+##################
+
+model = tf.keras.models.load_model(
+    "keras_model.h5",
+    compile=False
+)
+
+converter = tf.lite.TFLiteConverter.from_keras_model(model)
+
+tflite_model = converter.convert()
+
+with open("model.tflite", "wb") as f:
+    f.write(tflite_model)
+
+print("Conversion complete!")
+
+##############################
+
 # Get the folder containing this Python script
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
