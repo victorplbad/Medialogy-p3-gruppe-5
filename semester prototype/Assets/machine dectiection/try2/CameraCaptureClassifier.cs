@@ -13,6 +13,15 @@ using Unity.InferenceEngine;
 /// </summary>
 public class CameraCaptureClassifier : MonoBehaviour
 {
+
+    ////////////////////////////////////////////////////////////////////////
+    public CollectRessourses collectRessourses;
+
+
+
+
+
+    /////////////////////////////////////////////////////////////
     [Header("Model")]
     [SerializeField] private ModelAsset modelAsset;
     [SerializeField] private TextAsset labelsFile;
@@ -89,7 +98,7 @@ public class CameraCaptureClassifier : MonoBehaviour
 
         StartCoroutine(StartCamera());
     }
-
+        
     private IEnumerator StartCamera()
     {
 #if UNITY_ANDROID || UNITY_IOS
@@ -285,6 +294,27 @@ public class CameraCaptureClassifier : MonoBehaviour
         // Log every class score for debugging.
         for (int i = 0; i < scores.Length; i++)
             Debug.Log($"{labels[i]}: {scores[i] * 100f:0.00}%");
+
+        /////////////////////////////////////////////////////////////////
+        //Debug.Log(label);
+        //Debug.Log(confidencePercent);
+
+        
+
+        if (label == "bike")
+        {
+            collectRessourses.ironRes();
+        }
+        else if (label == "bottle")
+        {
+            collectRessourses.plastRes();
+        }
+        else if (label == "phone")
+        {
+            collectRessourses.electronicRes();
+        }
+
+        /////////////////////////////////////////////////////////////////
     }
 
     private void LoadLabels()
