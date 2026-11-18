@@ -39,4 +39,32 @@ public class CollectRessourses : MonoBehaviour
     }
 
 
+
+    public void minusironRes()
+    {
+
+        iron--;
+        Debug.Log(iron);
+        ironText.text = iron.ToString();
+    }
+
+
+    public void minusplastRes()
+    {
+
+        plast--;
+        Debug.Log(plast);
+        plastText.text = plast.ToString();
+
+    }
+
+    public void minuselectronicRes()
+    {
+
+        electronic--;
+        Debug.Log(electronic);
+        electronicText.text = electronic.ToString();
+
+    }
+
 }
