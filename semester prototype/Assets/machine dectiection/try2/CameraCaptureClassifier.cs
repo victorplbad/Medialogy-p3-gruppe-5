@@ -7,10 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.InferenceEngine;
 
-/// <summary>
-/// Webcam/phone capture -> freeze for one second -> classify using an ONNX model.
-/// Attach to a scene GameObject and assign the Inspector references.
-/// </summary>
+
 public class CameraCaptureClassifier : MonoBehaviour
 {
 
@@ -18,10 +15,8 @@ public class CameraCaptureClassifier : MonoBehaviour
     public CollectRessourses collectRessourses;
 
 
-
-
-
     /////////////////////////////////////////////////////////////
+    
     [Header("Model")]
     [SerializeField] private ModelAsset modelAsset;
     [SerializeField] private TextAsset labelsFile;
@@ -296,10 +291,7 @@ public class CameraCaptureClassifier : MonoBehaviour
             Debug.Log($"{labels[i]}: {scores[i] * 100f:0.00}%");
 
         /////////////////////////////////////////////////////////////////
-        //Debug.Log(label);
-        //Debug.Log(confidencePercent);
-
-        
+                
 
         if (label == "bike")
         {

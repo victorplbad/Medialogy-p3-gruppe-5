@@ -15,7 +15,7 @@ public class CollectRessourses : MonoBehaviour
     {
         
         iron++;
-        Debug.Log(iron);
+        Debug.Log(iron); //////////////
         ironText.text = iron.ToString();
     }
 
@@ -24,7 +24,7 @@ public class CollectRessourses : MonoBehaviour
     {
      
         plast++;
-        Debug.Log(plast);
+        Debug.Log(plast); //////////////
         plastText.text = plast.ToString();
 
     }
@@ -33,7 +33,7 @@ public class CollectRessourses : MonoBehaviour
     {
         
         electronic++;
-        Debug.Log(electronic);
+        Debug.Log(electronic); //////////////
         electronicText.text = electronic.ToString();
 
     }
@@ -44,7 +44,7 @@ public class CollectRessourses : MonoBehaviour
     {
 
         iron--;
-        Debug.Log(iron);
+        Debug.Log(iron); //////////////
         ironText.text = iron.ToString();
     }
 
@@ -53,7 +53,7 @@ public class CollectRessourses : MonoBehaviour
     {
 
         plast--;
-        Debug.Log(plast);
+        Debug.Log(plast); //////////////
         plastText.text = plast.ToString();
 
     }
@@ -62,7 +62,7 @@ public class CollectRessourses : MonoBehaviour
     {
 
         electronic--;
-        Debug.Log(electronic);
+        Debug.Log(electronic); //////////////
         electronicText.text = electronic.ToString();
 
     }
